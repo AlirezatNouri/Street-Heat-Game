@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Heat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="panel">
+      <div>
+        <p class="eyebrow">Open-world prototype</p>
+        <h1>Street Heat</h1>
+        <p class="lede">
+          A lightweight GTA-style top-down game. Steal cars, evade police, grab cash,
+          and clear short missions in a compact city sandbox.
+        </p>
+      </div>
+
+      <section class="card">
+        <h2>Controls</h2>
+        <ul>
+          <li><span>Move</span><strong>WASD / Arrows</strong></li>
+          <li><span>Sprint</span><strong>Shift</strong></li>
+          <li><span>Shoot</span><strong>Space</strong></li>
+          <li><span>Enter / Exit car</span><strong>E</strong></li>
+          <li><span>Restart after bust</span><strong>R</strong></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Goals</h2>
+        <ul>
+          <li><span>Mission 1</span><strong>Collect 3 cash drops</strong></li>
+          <li><span>Mission 2</span><strong>Escape police at 2 heat</strong></li>
+          <li><span>Mission 3</span><strong>Jack a moving car</strong></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Rules</h2>
+        <p>
+          Shooting and hitting civilians raise heat. Police spawn harder as heat climbs.
+          Lose the cops by staying out of their detection radius long enough.
+        </p>
+      </section>
+    </aside>
+
+    <main class="stage">
+      <div class="hud">
+        <div class="hud-block">
+          <span>Cash</span>
+          <strong id="cashValue">$0</strong>
+        </div>
+        <div class="hud-block">
+          <span>Heat</span>
+          <strong id="heatValue">0</strong>
+        </div>
+        <div class="hud-block">
+          <span>Health</span>
+          <strong id="healthValue">100</strong>
+        </div>
+        <div class="hud-block">
+          <span>Vehicle</span>
+          <strong id="vehicleValue">On Foot</strong>
+        </div>
+      </div>
+
+      <div class="mission-bar">
+        <span id="missionLabel">Mission</span>
+        <strong id="missionText">Collect 3 cash drops scattered across the city.</strong>
+      </div>
+
+      <canvas id="game" width="1280" height="720" aria-label="Street Heat game canvas"></canvas>
+
+      <div class="status-line">
+        <span id="statusText">Cruise the city and start trouble.</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
